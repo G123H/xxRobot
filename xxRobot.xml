@@ -1,1 +1,73 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_whileUntil" id="22" inline="false" x="116" y="68">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="37">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="robot_delay" id="47" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="54">
+            <field name="NUM">250</field>
+          </block>
+        </value>
+        <next>
+          <block type="movement_rightmotor" id="74" inline="true">
+            <value name="MOVRIGHT">
+              <block type="math_arithmetic" id="84" inline="true">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="math_arithmetic" id="81" inline="true">
+                    <field name="OP">MINUS</field>
+                    <value name="A">
+                      <block type="math_random" id="97"></block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="102">
+                        <field name="NUM">25</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="105">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="movement_leftmotor" id="64" inline="true">
+                <value name="MOVLEFT">
+                  <block type="math_arithmetic" id="83" inline="true">
+                    <field name="OP">MULTIPLY</field>
+                    <value name="A">
+                      <block type="math_arithmetic" id="82" inline="true">
+                        <field name="OP">MINUS</field>
+                        <value name="A">
+                          <block type="math_random" id="101"></block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="103">
+                            <field name="NUM">25</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="104">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
